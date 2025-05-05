@@ -1,0 +1,59 @@
+---
+// 1. Import this layout
+import BaseLayout from '@/layouts/BaseLayout.astro'; // Adjust path if needed
+
+const pageTitle = "About CoverageNepal";
+// Pass the title to the layout if it accepts it, otherwise BaseHead might handle it.
+// Example of passing title (if BaseLayout accepts it):
+// <BaseLayout title={pageTitle}>
+---
+{/* 2. Use the layout component as the main wrapper */}
+<BaseLayout> {/* Potentially add title={pageTitle} here */}
+  {/* 3. Add your page-specific content HERE. This goes into the <slot /> */}
+  {/* Apply Tailwind classes directly to these HTML elements */}
+
+  <div class="container mx-auto px-4 py-8 max-w-4xl"> {/* Constrained width container */}
+      <h1 class="text-3xl md:text-4xl font-bold mb-6 text-center">{pageTitle}</h1>
+
+      <section class="bg-gradient-to-r from-gray-50 to-gray-100 p-6 md:p-8 rounded-lg shadow-md mb-8 border border-gray-200">
+          <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-gray-800">Our Story 🇳🇵</h2>
+          {/* Updated About Us Content Below */}
+          <div class="space-y-4 text-gray-700 leading-relaxed">
+            <p>
+              Welcome to <strong>CoverageNepal</strong>! We are your dedicated online source for insightful news, in-depth blog posts, and comprehensive reports centered entirely on Nepal.
+            </p>
+            <p>
+              Whether you're looking for the latest headlines, thoughtful analysis, or diverse stories capturing the pulse of the nation, CoverageNepal aims to be your go-to platform. We cover a wide range of topics relevant to Nepal, from current events and politics to culture, travel, and societal trends.
+            </p>
+            <p>
+              Understanding the importance of language accessibility for our diverse audience, we proudly offer our content in both <strong>English</strong> and <strong>Nepali</strong>. This bilingual approach allows us to bridge gaps, connect with a broader community, and ensure that vital information and engaging stories reach everyone interested in Nepal.
+            </p>
+            <p>
+              Our mission is to deliver timely, accurate, and engaging coverage that truly matters – connecting you to the heart of Nepal's vibrant landscape and dynamic developments. Thank you for visiting and being part of the CoverageNepal community!
+            </p>
+          </div>
+          {/* End of Updated Content */}
+      </section>
+
+      <section class="mt-10">
+          <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-gray-800 text-center">Meet the Team 🧑‍💻</h2>
+          {/* Updated Placeholder for Team Section */}
+          <p class="text-center text-gray-600 mb-6">
+            CoverageNepal is brought to you by a passionate team of journalists, writers, editors, and technical experts dedicated to bringing you quality content about Nepal.
+          </p>
+          {/* You can replace the placeholder divs below with actual team info later */}
+          <div class="flex justify-center">
+              {/* Example Team Member Card Structure (Repeat as needed) */}
+              <div class="bg-white p-4 border border-gray-200 rounded-lg text-center shadow hover:shadow-lg transition-shadow">
+                  <img src="/images/admin.png" alt="Team Member" class="w-30 h-30 rounded-full mx-auto mb-3 bg-gray-200"/>
+                  <h3 class="font-semibold text-lg">Kishor Paudel</h3>
+                  <p class="text-sm text-gray-500">Admin</p>
+                  {/* Optional short bio or link */}
+              </div>
+             
+          </div>
+          {/* End of Updated Team Section */}
+      </section>
+  </div>
+
+</BaseLayout>

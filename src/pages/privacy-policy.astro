@@ -1,0 +1,73 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'; // Adjust path if needed
+
+const pageTitle = "Privacy Policy";
+const siteName = "CoverageNepal";
+const effectiveDate = "May 5, 2025"; // Updated automatically based on current date
+const contactMethod = "the methods listed on our Contact Us page"; // Or provide a specific email like privacy@coveragenepal.com
+---
+<BaseLayout> {/* Optional: title={pageTitle} */}
+
+  <div class="container mx-auto px-4 py-10 md:py-16 max-w-4xl">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-800">{pageTitle} for {siteName}</h1>
+    <p class="text-center text-gray-500 mb-8">Effective Date: {effectiveDate}</p>
+
+    <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6"> {/* Using Tailwind Prose for readability */}
+
+      <p>Welcome to {siteName}. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website ({Astro.url.origin}) and use our services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Information We Collect</h2>
+      <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
+      <h3 class="text-xl font-semibold mt-4 mb-2">Personal Data</h3>
+      <p>Personally identifiable information, such as your name, email address, and website URL, that you voluntarily give to us when you leave comments or use our contact form. You are under no obligation to provide us with personal information of any kind, however your refusal to do so may prevent you from using certain features of the Site.</p>
+
+      <h3 class="text-xl font-semibold mt-4 mb-2">Derivative Data (Log Files & Analytics)</h3>
+      <p>Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site. We may also use third-party analytics tools (like Google Analytics) to help us measure traffic and usage trends for the Service. These tools collect information sent by your device or our Service, including the web pages you visit, add-ons, and other information that assists us in improving the Service. This information is aggregated and cannot reasonably be used to identify any particular individual user.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Use of Your Information</h2>
+      <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:</p>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Operate and maintain the website.</li>
+        <li>Improve our website and offerings based on aggregated usage data.</li>
+        <li>Respond to your comments or inquiries via {contactMethod}.</li>
+        <li>Send you newsletters or promotional materials, if you have opted-in.</li>
+        <li>Prevent spam and protect the security of our Site.</li>
+        <li>Comply with legal obligations.</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Cookies and Web Beacons</h2>
+      <p>We may use cookies, web beacons, tracking pixels, and other tracking technologies on the Site to help customize the Site and improve your experience. When you access the Site, your personal information is not collected through the use of tracking technology. Most browsers are set to accept cookies by default. You can remove or reject cookies, but be aware that such action could affect the availability and functionality of the Site. We may also use third-party cookies for analytics or advertising purposes (if applicable). You can control cookie preferences through your browser settings.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Disclosure of Your Information</h2>
+      <p>We do not sell, trade, or rent your personally identifiable information to others. We may share information we have collected about you in certain situations:</p>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>By Law or to Protect Rights:</strong> If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.</li>
+        <li><strong>Third-Party Service Providers:</strong> We may share your information with third parties that perform services for us or on our behalf, including data analysis, hosting services, customer service, and marketing assistance (if applicable).</li>
+        <li><strong>Third-Party Advertisers:</strong> We may use third-party advertising companies to serve ads when you visit the Site. These companies may use information about your visits to the Site and other websites contained in web cookies to provide advertisements about goods and services of interest to you. (Include this if you use ads).</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Security of Your Information</h2>
+      <p>We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Third-Party Websites</h2>
+      <p>The Site may contain links to third-party websites and applications of interest, including advertisements and external services, that are not affiliated with us. Once you have used these links to leave the Site, any information you provide to these third parties is not covered by this Privacy Policy, and we cannot guarantee the safety and privacy of your information.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Children's Privacy</h2>
+      <p>We do not knowingly solicit information from or market to children under the age of 13 (or higher age as required by applicable law). If you become aware of any data we have collected from children under age 13, please contact us using the contact information provided below.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Your Data Rights</h2>
+      <p>Depending on your location and applicable laws (such as Nepal's Individual Privacy Act, 2018, or GDPR for European residents), you may have certain rights regarding your personal data, including the right to access, correct, update, or request deletion of your personal information. To exercise these rights, please contact us using {contactMethod}. We will respond to your request in accordance with applicable data protection laws.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Contact Us</h2>
+      <p>If you have questions or comments about this Privacy Policy, please contact us through {contactMethod}.</p>
+
+      <hr class="mt-10"/>
+      <p class="text-sm text-gray-500 italic">Disclaimer: This Privacy Policy is provided as a general template. {siteName} recommends consulting with a legal professional to ensure full compliance with all applicable laws and regulations specific to your activities and jurisdiction.</p>
+
+    </div>
+  </div>
+
+</BaseLayout>

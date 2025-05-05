@@ -1,0 +1,42 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'; // Adjust path if needed
+
+const pageTitle = "Disclaimer";
+const siteName = "CoverageNepal";
+const lastUpdatedDate = "May 5, 2025"; // Updated automatically based on current date
+const contactMethod = "our Contact Us page"; // Reference how users can contact
+---
+<BaseLayout> {/* Optional: title={pageTitle} */}
+
+  <div class="container mx-auto px-4 py-10 md:py-16 max-w-4xl">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-800">{pageTitle} for {siteName}</h1>
+    <p class="text-center text-gray-500 mb-8">Last Updated: {lastUpdatedDate}</p>
+
+    <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-5"> {/* Using Tailwind Prose for readability */}
+
+      <p><strong class="font-semibold">General Information:</strong> The information provided by {siteName} ("we," "us," or "our") on {Astro.url.origin} (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.</p>
+
+      <p><strong class="font-semibold">Not Professional Advice:</strong> The information provided on this Site is not intended as, and shall not be understood or construed as, professional advice (including but not limited to financial, legal, medical, or other professional advice). The content published is based on research, experience, and personal opinions of the authors. You should consult with a qualified professional before making any decisions based on the information presented on this Site.</p>
+
+      <p><strong class="font-semibold">Accuracy of Information:</strong> We strive to provide accurate and up-to-date information, but we cannot guarantee that all information is always current or completely accurate. News changes rapidly, and content may become outdated. We are not responsible for any errors or omissions, or for the results obtained from the use of this information.</p>
+
+      <p><strong class="font-semibold">External Links:</strong> The Site may contain (or you may be sent through the Site) links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us. We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or reliability of any information offered by third-party websites linked through the site or any website or feature linked in any banner or other advertising.</p>
+
+      <p><strong class="font-semibold">Views Expressed:</strong> The views and opinions expressed on this Site, especially in blog posts, comments, or contributions by guest authors, are those of the authors and do not necessarily reflect the official policy or position of {siteName}. Any content provided by our bloggers or authors are of their opinion and are not intended to malign any religion, ethnic group, club, organization, company, individual or anyone or anything.</p>
+
+      <p><strong class="font-semibold">Affiliate Disclosure / Advertising:</strong> (Optional - Include/Modify if applicable) {siteName} may engage in affiliate marketing or display advertisements, which means we may receive commissions or fees if you purchase products or services through links provided on our Site. We aim to provide honest opinions, findings, beliefs, or experiences on those topics or products, but you should verify any product claim, statistic, quote or other representation about a product or service with the manufacturer, provider or party in question. The compensation received may influence the advertising content, topics or posts made in this blog.</p>
+
+      <p><strong class="font-semibold">Fair Use Notice:</strong> This Site may contain copyrighted material the use of which has not always been specifically authorized by the copyright owner. We make such material available in our efforts to advance understanding of environmental, political, human rights, economic, democracy, scientific, and social justice issues, etc., believing this constitutes a 'fair use' of any such copyrighted material as provided for in relevant copyright law. If you wish to use copyrighted material from this site for purposes of your own that go beyond 'fair use', you must obtain permission from the copyright owner.</p>
+
+      <p><strong class="font-semibold">No Endorsement:</strong> Reference to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise, does not necessarily constitute or imply its endorsement, recommendation, or favoring by {siteName}.</p>
+
+      <p><strong class="font-semibold">Limitation of Liability:</strong> Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the site or reliance on any information provided on the site. Your use of the site and your reliance on any information on the site is solely at your own risk.</p>
+
+      <p><strong class="font-semibold">Changes to Disclaimer:</strong> We reserve the right to make changes to this Disclaimer at any time and for any reason. We will alert you about any changes by updating the "Last Updated" date of this Disclaimer.</p>
+
+      <p><strong class="font-semibold">Contact Us:</strong> If you have any questions about this Disclaimer, please contact us via {contactMethod}.</p>
+
+    </div>
+  </div>
+
+</BaseLayout>
