@@ -5,11 +5,11 @@ const { title, url, description, pubDate, author, image, tags } = Astro.props;
 
 <li>
   <a href={url} title={title} class="group">
-    <article class="flex-1 h-full flex flex-col">
+    <article class="flex-1 h-full flex flex-col border-[1px] border-gray-300">
       <div class="block w-full lg:col-span-2">
         <img
-          class="aspect-[2/3] object-cover bg-center h-full w-full"
-          src={image}
+          class="aspect-[5/5] object-cover bg-center h-full w-full"
+          src={image || '/images/blog.jpg'}
           alt={title}
         />
       </div>
@@ -27,8 +27,8 @@ const { title, url, description, pubDate, author, image, tags } = Astro.props;
           <p class="text-black mt-2 font-display text-xl text-pretty">
             {title}
           </p>
-        </div>
         <p class="mt-4 text-sm text-zinc-500 line-clamp-2">{description}</p>
+        </div>
       </div>
     </article>
   </a>

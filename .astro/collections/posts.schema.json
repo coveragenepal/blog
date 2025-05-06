@@ -39,10 +39,6 @@
               "type": "string"
             }
           },
-          "required": [
-            "url",
-            "alt"
-          ],
           "additionalProperties": false
         },
         "$schema": {
@@ -52,9 +48,7 @@
       "required": [
         "title",
         "pubDate",
-        "description",
-        "author",
-        "image"
+        "description"
       ],
       "additionalProperties": false
     }

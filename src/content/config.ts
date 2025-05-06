@@ -5,12 +5,12 @@ const postsCollection = defineCollection({
       title: z.string(),
       pubDate: z.date(),
       description: z.string(),
-      author: z.string(),
+      author: z.string().optional(),
 
       image: z.object({
-        url: z.string(),
-        alt: z.string()
-      }),
+        url: z.string().optional(),
+        alt: z.string().optional()
+      }).optional(),
     })
  });
 
