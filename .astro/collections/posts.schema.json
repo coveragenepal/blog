@@ -45,12 +45,6 @@
           ],
           "additionalProperties": false
         },
-        "tags": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "$schema": {
           "type": "string"
         }
@@ -60,8 +54,7 @@
         "pubDate",
         "description",
         "author",
-        "image",
-        "tags"
+        "image"
       ],
       "additionalProperties": false
     }

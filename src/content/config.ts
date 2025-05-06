@@ -11,8 +11,6 @@ const postsCollection = defineCollection({
         url: z.string(),
         alt: z.string()
       }),
-
-      tags: z.array(z.string())
     })
  });
 

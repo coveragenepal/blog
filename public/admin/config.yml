@@ -1,0 +1,27 @@
+# In public/admin/config.yml
+
+backend:
+  name: github # Use the GitHub backend
+  repo: coveragenepal/blog # IMPORTANT: Replace with your actual repo path
+  branch: main # Or your default branch
+  auth_type: pkce # Recommended OAuth flow (Proof Key for Code Exchange)
+  app_id: Ov23linWdiWCpfy1NTkQ # <<< We will get this from GitHub in the next step
+
+# Media files configuration (keep as before)
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Collections configuration (keep as before, ensure fields match your Astro schema)
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      # Add other fields like author, image, tags as needed
+      - { label: "Body", name: "body", widget: "markdown" }
+      
