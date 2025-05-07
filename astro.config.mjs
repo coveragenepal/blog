@@ -6,17 +6,14 @@ import tailwindcss from '@tailwindcss/vite'; // Using Tailwind via Vite plugin
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 
-// Define username and repo name for clarity
-const GITHUB_USERNAME = 'coveragenepal';
-const GITHUB_REPONAME = 'blog';
 
 // https://astro.build/config
 export default defineConfig({
   // REQUIRED: Set the final deployment URL root domain for GitHub Pages
-  site: `https://${GITHUB_USERNAME}.github.io`,
+  site: `https://coveragenepal.github.io`,
 
   // REQUIRED: Set the base path for the project repository deployment
-  base: `/${GITHUB_REPONAME}`,
+  base: `/blog`,
 
   // Vite configuration (including Tailwind)
   vite: {
