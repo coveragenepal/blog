@@ -1,0 +1,41 @@
+# In public/admin/config.yml
+
+backend:
+  name: github # Use the GitHub backend
+  repo: coveragenepal/blog # IMPORTANT: Replace with your actual repo path
+  branch: main # Or your default branch
+  auth_type: pkce # Recommended OAuth flow (Proof Key for Code Exchange)
+  app_id: Ov23linWdiWCpfy1NTkQ # Replace with your ACTUAL Client ID
+
+# Media files configuration
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Collections configuration
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # <--- All field list items below must start at this indentation level + 2 spaces + hyphen + space
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      # Assuming author should still be here and optional:
+      - { label: "Author", name: "author", widget: "string", optional: true }
+
+      # --- Correctly Indented and Placed Image Field ---
+      - label: "Featured Image"   # This '-' must align with the '-' above
+        name: "image"
+        widget: "object"
+        optional: true
+        fields: # Fields inside the object are indented further
+          - { label: "Image File", name: "url", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+
+      # --- Correctly Indented and Placed Tags Field ---
+      - { label: "Tags", name: "tags", widget: "list", optional: true } # This '-' must align
+
+      # --- Correctly Indented Body Field (ONLY ONE) ---
+      - { label: "Body", name: "body", widget: "markdown" } # This '-' must align
